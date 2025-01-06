@@ -1,0 +1,88 @@
+<!-- usertracking/templates/usertracking/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Alert</title>
+    <!-- Link to Bootstrap 4 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e0f7fa; /* Light blue background */
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .alert {
+            background-color: #f44336;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .alert h2 {
+            font-weight: bold;
+        }
+        .alert p {
+            font-size: 1.1rem;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn-info {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            border: none;
+        }
+        .btn-info:hover {
+            background-color: #0056b3;
+        }
+        .info-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .info-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="alert">
+            <h2>Your Device Might Be Compromised!</h2>
+            <p>We've detected unusual activity on your device. It could be an attempt by hackers to gain unauthorized access.</p>
+            <p>Be cautious of phishing attacks, which are designed to steal your sensitive information such as passwords and credit card details.</p>
+        </div>
+
+        <div class="button-container">
+            <button class="btn-info" onclick="alert('Stay safe and protect your device!')">Protect Your Device</button>
+        </div>
+
+        <div class="info-section">
+            <h3>What is Phishing?</h3>
+            <p>Phishing is a method used by cybercriminals to deceive individuals into divulging sensitive information, typically through fake websites or deceptive emails.</p>
+
+            <h3>How to Protect Yourself?</h3>
+            <p>
+                1. Always verify the sender of any suspicious emails before clicking on any links.<br>
+                2. Avoid visiting unfamiliar websites or providing personal information on questionable sites.<br>
+                3. Use multi-factor authentication (MFA) on your accounts wherever possible.<br>
+                4. Regularly update your software to patch security vulnerabilities.<br>
+                5. Be cautious of any pop-ups or unexpected messages asking for your credentials.
+            </p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

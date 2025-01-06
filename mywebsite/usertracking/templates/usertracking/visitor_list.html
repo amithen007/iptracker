@@ -1,0 +1,85 @@
+<!-- usertracking/templates/usertracking/visitor_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor List</title>
+    <!-- Link to Bootstrap 4 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .table {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            vertical-align: middle;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center mb-4">Visitor List</h2>
+
+        <!-- Table displaying visitor data -->
+        <table class="table table-striped table-bordered">
+            <thead class="header">
+                <tr>
+                    <th>IP Address</th>
+                    <th>Hostname</th>
+                    <th>City</th>
+                    <th>Region</th>
+                    <th>Country</th>
+                    <th>Country Code</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Timezone</th>
+                    <th>Postal Code</th>
+                    <th>Organisation</th>
+                    <th>Visited At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for visitor in visitors %}
+                    <tr>
+                        <td>{{ visitor.ip_address }}</td>
+                        <td>{{ visitor.hostname }}</td>
+                        <td>{{ visitor.city }}</td>
+                        <td>{{ visitor.region }}</td>
+                        <td>{{ visitor.country }}</td>
+                        <td>{{ visitor.country_code }}</td>
+                        <td>{{ visitor.latitude }}</td>
+                        <td>{{ visitor.longitude }}</td>
+                        <td>{{ visitor.timezone }}</td>
+                        <td>{{ visitor.postal_code }}</td>
+                        <td>{{ visitor.organisation }}</td>
+                        <td>{{ visitor.visited_at }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="12" class="text-center">No visitors found</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
